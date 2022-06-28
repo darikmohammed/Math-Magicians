@@ -1,0 +1,27 @@
+.btn {
+  background-color: rgb(124, 122, 126);
+  border: 0.1rem solid #000;
+}
+
+.btn#btn0 {
+  grid-column: 1 / span 2;
+  border-bottom-left-radius: 20px;
+}
+
+.btn:last-child {
+  border-bottom-right-radius: 20px;
+  background-color: rgb(255, 159, 10);
+}
+
+.btn#btn÷,
+.btn#btnx,
+.btn#btn-,
+.btn:nth-child(16) {
+  background-color: rgb(255, 159, 10);
+}
+
+.btn:nth-child(1),
+.btn:nth-child(2),
+.btn:nth-child(3) {
+  background-color: rgb(98, 96, 101);
+}
