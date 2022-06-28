@@ -3,8 +3,12 @@ import './Style/Calculator.css';
 import PropTypes from 'prop-types';
 import Button from './Button';
 
-// eslint-disable-next-line react/prefer-stateless-function
 export default class Calculator extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
   render() {
     const { calculatorButtons } = this.props;
     return (

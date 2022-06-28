@@ -2,8 +2,12 @@ import React, { Component } from 'react';
 import './Style/Button.css';
 import PropTypes from 'prop-types';
 
-// eslint-disable-next-line react/prefer-stateless-function
 export default class Button extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
   render() {
     const { value } = this.props;
     return (
