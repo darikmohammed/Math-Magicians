@@ -4,7 +4,6 @@ import Calculator from './components/Calculator';
 export default class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { display: 0 };
     this.buttons = [
       'AC',
       '+/-',
@@ -29,13 +28,9 @@ export default class App extends Component {
   }
 
   render() {
-    const { display } = this.state;
     return (
       <div>
-        <Calculator
-          calculatorButtons={this.buttons}
-          display={display}
-        />
+        <Calculator calculatorButtons={this.buttons} />
       </div>
     );
   }
