@@ -17,8 +17,7 @@ export default class Calculator extends Component {
   }
 
   screen() {
-    const { total, next, operation } = this.state;
-    if (!next && !operation) return total;
+    const { total, next } = this.state;
     if (!next) return total;
     return next;
   }
