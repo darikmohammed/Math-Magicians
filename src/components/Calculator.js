@@ -7,13 +7,7 @@ import calculate from '../logic/calculate';
 export default class Calculator extends Component {
   constructor(props) {
     super(props);
-    this.handleButtonClick = this.handleButtonClick.bind(this);
     this.state = { total: null, next: null, operation: null };
-  }
-
-  handleButtonClick(e) {
-    const value = calculate(this.state, e.target.innerHTML);
-    this.setState(value);
   }
 
   screen() {
@@ -23,6 +17,10 @@ export default class Calculator extends Component {
   }
 
   render() {
+    const handleButtonClick = (e) => {
+      const value = calculate(this.state, e.target.innerHTML);
+      this.setState(value);
+    };
     const { calculatorButtons } = this.props;
     return (
       <div className="calculator-body">
@@ -32,7 +30,7 @@ export default class Calculator extends Component {
             <Button
               value={button}
               key={button}
-              handleButtonClick={this.handleButtonClick}
+              handleButtonClick={handleButtonClick}
             />
           ))}
         </div>
