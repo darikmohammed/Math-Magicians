@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Button from './Button';
 import calculate from '../logic/calculate';
 
-function Calculator({ calculatorButtons }) {
+const Calculator = ({ calculatorButtons }) => {
   const [calculator, setCalculator] = useState({
     total: null,
     next: null,
@@ -35,7 +35,7 @@ function Calculator({ calculatorButtons }) {
       </div>
     </div>
   );
-}
+};
 
 export default Calculator;
 

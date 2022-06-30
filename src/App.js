@@ -1,7 +1,7 @@
 import React from 'react';
 import Calculator from './components/Calculator';
 
-function App() {
+const App = () => {
   const buttons = [
     'AC',
     '+/-',
@@ -28,6 +28,6 @@ function App() {
       <Calculator calculatorButtons={buttons} />
     </div>
   );
-}
+};
 
 export default App;
