@@ -5,13 +5,7 @@ import PropTypes from 'prop-types';
 export default class Button extends Component {
   constructor(props) {
     super(props);
-    this.handleButtonClick = this.handleButtonClick.bind(this);
     this.state = {};
-  }
-
-  handleButtonClick() {
-    const { handleButtonClick } = this.props;
-    handleButtonClick();
   }
 
   render() {
