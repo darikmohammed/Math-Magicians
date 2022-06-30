@@ -1,30 +1,28 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import './Style/Calculator.css';
 import PropTypes from 'prop-types';
 import Button from './Button';
 import calculate from '../logic/calculate';
 
-export default class Calculator extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { total: null, next: null, operation: null };
-  }
-
-  screen() {
-    const { total, next } = this.state;
+const Calculator = ({ calculatorButtons }) => {
+  const [calculator, setCalculator] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
+  const screen = () => {
+    const { total, next } = calculator;
     if (!next) return total;
     return next;
-  }
-
-  render() {
-    const handleButtonClick = (e) => {
-      const value = calculate(this.state, e.target.innerHTML);
-      this.setState(value);
-    };
-    const { calculatorButtons } = this.props;
-    return (
+  };
+  const handleButtonClick = (e) => {
+    const value = calculate(calculator, e.target.innerHTML);
+    setCalculator(value);
+  };
+  return (
+    <div>
       <div className="calculator-body">
-        <div className="display">{this.screen() || '0'}</div>
+        <div className="display">{screen() || '0'}</div>
         <div className="calculator-btns">
           {calculatorButtons.map((button) => (
             <Button
@@ -35,9 +33,11 @@ export default class Calculator extends Component {
           ))}
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
+
+export default Calculator;
 
 Calculator.propTypes = {
   calculatorButtons: PropTypes.arrayOf(PropTypes.string).isRequired,
