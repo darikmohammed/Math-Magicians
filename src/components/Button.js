@@ -1,27 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Style/Button.css';
 import PropTypes from 'prop-types';
 
-export default class Button extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    const { value, handleButtonClick } = this.props;
-    return (
-      <button
-        type="button"
-        className="btn"
-        id={`btn${value}`}
-        onClick={handleButtonClick}
-      >
-        {value}
-      </button>
-    );
-  }
+function Button({ value, handleButtonClick }) {
+  return (
+    <button
+      type="button"
+      className="btn"
+      id={`btn${value}`}
+      onClick={handleButtonClick}
+    >
+      {value}
+    </button>
+  );
 }
+
+export default Button;
 
 Button.propTypes = {
   value: PropTypes.string.isRequired,
