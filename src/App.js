@@ -1,5 +1,8 @@
 import React from 'react';
-import Calculator from './components/Calculator';
+import { Routes, Route } from 'react-router-dom';
+import Home from './Routes/Home';
+import About from './Routes/About';
+import Calc from './Routes/Calc';
 
 const App = () => {
   const buttons = [
@@ -25,7 +28,14 @@ const App = () => {
   ];
   return (
     <div>
-      <Calculator calculatorButtons={buttons} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/calculator"
+          element={<Calc calculatorButtons={buttons} />}
+        />
+        <Route path="about" element={<About />} />
+      </Routes>
     </div>
   );
 };
