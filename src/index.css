@@ -14,6 +14,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url('/public/img/geometry-1023846_1280.webp') no-repeat;
+  background-size: cover;
 }
 
 code {
