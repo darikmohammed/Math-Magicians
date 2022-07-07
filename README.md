@@ -13,7 +13,7 @@
 
 ## Live Demo
 
-[Netlify Live Demo Link](https://62c740a4fd8c9239d8e6e603--jolly-puffpuff-408c39.netlify.app/calculator)
+[Netlify Live Demo Link](https://62c740a4fd8c9239d8e6e603--jolly-puffpuff-408c39.netlify.app/)
 
 ## Getting Started
 
